@@ -32,6 +32,6 @@ class Firework:
     def update(self):
         for p in self.particles:
             p.update()
-        self.particles = [p for p in p.particles if p.life > 0]
+        self.particles = [p for p in self.particles if p.life > 0]
         if not self.particles:
             self.is_alive = False
